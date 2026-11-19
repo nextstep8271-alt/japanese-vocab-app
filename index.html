@@ -1,7 +1,32 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101827"><link rel="manifest" href="./manifest.webmanifest"><title>일본어 단어장</title>
 <style>
-:root{color-scheme:dark;--bg:#0d1422;--panel:#172235;--muted:#9eacc2;--line:#293850;--accent:#8bd5ff;--green:#9be3bb}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f4f7fb;font-family:system-ui,-apple-system,sans-serif}header{padding:22px 18px 14px;background:#111c2e;position:sticky;top:0;z-index:2;border-bottom:1px solid var(--line)}h1{font-size:22px;margin:0 0 5px}.sub{font-size:12px;color:var(--muted)}main{max-width:680px;margin:auto;padding:16px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}.stat,.card,.tools{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:13px}.stat b{display:block;font-size:20px}.stat span{font-size:11px;color:var(--muted)}.tabs{display:flex;gap:7px;overflow:auto;margin:12px 0}.tabs button,.btn{border:1px solid var(--line);background:#1c2b42;color:#eaf3ff;border-radius:10px;padding:10px 13px;font-weight:650;white-space:nowrap}.tabs button.active,.btn.primary{background:#b6e5ff;color:#0b1a2b;border-color:#b6e5ff}input,select{width:100%;padding:12px;border-radius:10px;background:#101c2e;border:1px solid var(--line);color:white;font-size:15px}.card{margin-top:12px;text-align:center;padding:24px 16px}.level{font-size:12px;color:var(--accent)}.word{font-size:38px;font-weight:750;margin:12px 0}.reading{color:var(--muted);font-size:16px}.meaning{font-size:20px;margin:15px 0}.example{font-size:16px;line-height:1.7;margin-top:18px}.translation{font-size:13px;color:var(--muted)}.actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}.small{font-size:12px;color:var(--muted);line-height:1.6}.hidden{display:none}.progress{height:7px;background:#26364d;border-radius:10px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;background:var(--green);width:0}.list{display:grid;gap:8px;margin-top:12px}.item{display:flex;justify-content:space-between;align-items:center;background:var(--panel);padding:12px;border-radius:10px;border:1px solid var(--line)}.item strong{font-size:18px}.item small{display:block;color:var(--muted)}footer{text-align:center;padding:24px;color:var(--muted);font-size:11px}
+:root{color-scheme:dark;--bg:#0b1220;--panel:#151f31;--panel2:#1b2940;--muted:#91a2bb;--line:#26364e;--accent:#9bdcff;--green:#9be3bb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#182a43 0,#0b1220 55%);color:#f4f7fb;font-family:system-ui,-apple-system,sans-serif;min-height:100vh}
+header{padding:calc(18px + env(safe-area-inset-top)) 20px 17px;background:rgba(12,21,36,.94);position:sticky;top:0;z-index:5;border-bottom:1px solid rgba(145,162,187,.14);backdrop-filter:blur(18px)}
+h1{font-size:21px;letter-spacing:-.5px;margin:0 0 4px;font-weight:800}.sub{font-size:11px;color:var(--muted)}
+main{max-width:620px;margin:auto;padding:18px 16px calc(30px + env(safe-area-inset-bottom))}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:2px 0 13px}
+.stat,.card,.tools{background:linear-gradient(145deg,#19263a,#121d2e);border:1px solid rgba(145,162,187,.13);border-radius:19px;padding:14px;box-shadow:0 8px 28px #0002}
+.stat b{display:block;font-size:22px;letter-spacing:-.5px}.stat span{font-size:10px;color:var(--muted)}
+.progress{height:6px;background:#25354b;border-radius:20px;overflow:hidden;margin:11px 2px 17px}.progress i{display:block;height:100%;background:linear-gradient(90deg,#79c9ff,#9be3bb);width:0;border-radius:20px;transition:width .25s}
+.tabs{display:flex;gap:7px;overflow-x:auto;margin:13px 0 17px;padding:2px 0 5px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button,.btn{border:1px solid var(--line);background:#1a2940;color:#dce8f7;border-radius:12px;padding:11px 14px;font-weight:700;white-space:nowrap;font-size:13px}
+.tabs button.active,.btn.primary{background:var(--accent);color:#0b1a2b;border-color:var(--accent)}
+input,select{width:100%;padding:14px;border-radius:13px;background:#111d30;border:1px solid var(--line);color:white;font-size:15px}
+.card{margin-top:8px;text-align:center;padding:30px 18px 24px;min-height:340px;display:flex;flex-direction:column;justify-content:center}
+.level{font-size:11px;color:var(--accent);font-weight:750;letter-spacing:1px;text-transform:uppercase}
+.word{font-size:clamp(42px,11vw,56px);font-weight:850;letter-spacing:1px;margin:20px 0}
+.reading{color:var(--muted);font-size:16px}.meaning{font-size:21px;font-weight:750;margin:17px 0}
+.example{font-size:16px;line-height:1.8;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
+.translation{font-size:13px;color:var(--muted);margin-top:7px;line-height:1.6}
+.actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:24px}.actions .btn{flex:1;min-width:calc(50% - 8px);padding:13px 10px}
+.small{font-size:12px;color:var(--muted);line-height:1.7}.hidden{display:none}
+.list{display:grid;gap:9px;margin-top:13px}.item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel);padding:13px;border-radius:14px;border:1px solid rgba(145,162,187,.13)}
+.item strong{font-size:18px}.item small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+footer{text-align:center;padding:24px 10px;color:var(--muted);font-size:10px;line-height:1.6}
+button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.98)}
+@media(min-width:600px){main{padding-top:24px}.card{min-height:390px}}
 </style></head><body><header><h1>일본어 단어장 🇯🇵</h1><div class="sub">하루 20개 · JLPT N5–N1 · JPT · 반도체/장비 업무</div></header><main>
 <div class="stats"><div class="stat"><b id="todayCount">0/20</b><span>오늘 학습</span></div><div class="stat"><b id="knownCount">0</b><span>외운 단어</span></div><div class="stat"><b id="reviewCount">0</b><span>복습 단어</span></div></div>
 <div class="progress"><i id="bar"></i></div><div class="tabs" id="tabs"><button class="active" data-tab="daily">오늘의 20개</button><button data-tab="jlpt">JLPT</button><button data-tab="work">업무/반도체</button><button data-tab="review">복습</button><button data-tab="search">검색</button></div>
