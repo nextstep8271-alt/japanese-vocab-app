@@ -1,1 +1,18 @@
-{"name":"일본어 단어장","short_name":"일본어 단어장","start_url":"./","display":"standalone","background_color":"#0d1422","theme_color":"#101827","lang":"ko"}
+{
+  "name": "일본어 단어장",
+  "short_name": "일본어 단어장",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1422",
+  "theme_color": "#101827",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
